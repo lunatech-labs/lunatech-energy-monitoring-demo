@@ -1,0 +1,6 @@
+#!/bin/bash
+[ -z $FLYWAY_URL ] && [ -n $POSTGRES_DB ] && [ -n $POSTGRES_HOSTNAME ] && export FLYWAY_URL="jdbc:postgresql://${POSTGRES_HOSTNAME}:${POSTGRES_PORT:-5432}/${POSTGRES_DB}"
+[ -z $FLYWAY_SCHEMAS ] && [ -n $POSTGRES_DB ] && export FLYWAY_SCHEMAS="${POSTGRES_DB}"
+[ -z $FLYWAY_USER ] && [ -n $POSTGRES_USERNAME ] && export FLYWAY_USER="${POSTGRES_USERNAME}"
+[ -z $FLYWAY_PASSWORD ] && [ -n $POSTGRES_PASSWORD ] && export FLYWAY_PASSWORD="${POSTGRES_PASSWORD}"
+exec flyway $@

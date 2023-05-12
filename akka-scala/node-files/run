@@ -1,0 +1,46 @@
+#!/bin/bash
+
+######################################################################
+# Run the application on this Pi node
+#
+# Example: ./run [version]
+#
+######################################################################
+
+VERSION_ARG=$1
+VERSION=${VERSION_ARG:-0.0.1}
+
+# As the exercise is unzipped in the background (see copy command for details),
+# it is necessary to check if 'unzip' command is still running, if it is, try
+# again in a second... We know that 'unzip' is finished when the zip archive
+# is gone (it is deleted by the 'copy' script
+while [ -f applications/digital-twins-*${VERSION}*.zip ];do
+  sleep 1
+done
+
+APPLICATION_FOLDER=$(cd applications 2>/dev/null;  ls -d digital-twins*${VERSION}* 2>/dev/null)
+# Check if an exercise was found with the given number, otherwise exit
+if [ "Empty$APPLICATION_FOLDER" == "Empty" ]; then
+	echo "No exercise found with exercise number $1"
+  exit -1
+fi
+
+APPLICATION_RUNSCRIPT=$(cd applications/$APPLICATION_FOLDER/bin && ls |grep -v .bat)
+NODE=`hostname`
+WIFI_IP=`ip route show | awk '/dev wlan0 proto/ { print $9 }'`
+
+echo "Running $APPLICATION_RUNSCRIPT on $NODE"
+
+sudo pkill -SIGKILL -f "exercise.*_[0-9][0-9][0-9]_.*"
+
+shift
+
+if [ -f setLedType ];then
+  . ./setLedType
+fi
+
+LedStripType=${LED_STRIP_TYPE:-eight-led-reversed-order}
+
+cd applications/$APPLICATION_FOLDER
+
+POSTGRES_HOST=node-4 sudo bin/$APPLICATION_RUNSCRIPT -Dcluster-node-configuration.node-hostname=$NODE -Dakka.management.http.hostname=$NODE -Dcluster-status-indicator.led-strip-type=$LED_STRIP_TYPE

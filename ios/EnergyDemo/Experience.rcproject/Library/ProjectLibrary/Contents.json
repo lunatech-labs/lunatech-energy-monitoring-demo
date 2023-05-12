@@ -1,0 +1,22 @@
+[
+  {
+    "libraryIdentifier" : "a867bbe76498fca8e51d351c8b4f1cf2",
+    "format" : "image",
+    "displayName" : "blk001.png"
+  },
+  {
+    "libraryIdentifier" : "245b388fc5980d52978a287faa690b15",
+    "format" : "model",
+    "displayName" : "robot.usdz"
+  },
+  {
+    "libraryIdentifier" : "d7a8e430a1a44d201dc03c6778b6a5a1",
+    "format" : "model",
+    "displayName" : "pbj.usdz"
+  },
+  {
+    "libraryIdentifier" : "9f8fa8f7a9197fea40c1183d06951508",
+    "format" : "model",
+    "displayName" : "robot.usdz"
+  }
+]

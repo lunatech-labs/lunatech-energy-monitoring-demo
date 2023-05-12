@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A50DE79A2A0E76AD00143B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE7992A0E76AD00143B5F /* AppDelegate.swift */; };
+		A50DE79C2A0E76AD00143B5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE79B2A0E76AD00143B5F /* ContentView.swift */; };
+		A50DE79E2A0E76AD00143B5F /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A50DE79D2A0E76AD00143B5F /* Experience.rcproject */; };
+		A50DE7A02A0E76AF00143B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50DE79F2A0E76AF00143B5F /* Assets.xcassets */; };
+		A50DE7A32A0E76AF00143B5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50DE7A22A0E76AF00143B5F /* Preview Assets.xcassets */; };
+		A50DE7AB2A0E86E100143B5F /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = A50DE7AA2A0E86E100143B5F /* CGRPCZlib */; };
+		A50DE7AD2A0E86E100143B5F /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = A50DE7AC2A0E86E100143B5F /* GRPC */; };
+		A50DE7AF2A0E86E100143B5F /* protoc-gen-grpc-swift in Frameworks */ = {isa = PBXBuildFile; productRef = A50DE7AE2A0E86E100143B5F /* protoc-gen-grpc-swift */; };
+		A50DE7B22A0E92D000143B5F /* digital-twin.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE7B02A0E92D000143B5F /* digital-twin.pb.swift */; };
+		A50DE7B32A0E92D000143B5F /* digital-twin.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE7B12A0E92D000143B5F /* digital-twin.grpc.swift */; };
+		A50DE7B52A0E934600143B5F /* DigitalTwinsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE7B42A0E934600143B5F /* DigitalTwinsService.swift */; };
+		A50DE7BD2A13C76D00143B5F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE7BC2A13C76D00143B5F /* Coordinator.swift */; };
+		A50DE7C12A13C9B800143B5F /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A50DE7C02A13C9B800143B5F /* robot.usdz */; };
+		A50DE7C72A13DA1700143B5F /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DE7C62A13DA1700143B5F /* AnimationManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A50DE7962A0E76AD00143B5F /* EnergyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50DE7992A0E76AD00143B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A50DE79B2A0E76AD00143B5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A50DE79D2A0E76AD00143B5F /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		A50DE79F2A0E76AF00143B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50DE7A22A0E76AF00143B5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A50DE7B02A0E92D000143B5F /* digital-twin.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "digital-twin.pb.swift"; sourceTree = "<group>"; };
+		A50DE7B12A0E92D000143B5F /* digital-twin.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "digital-twin.grpc.swift"; sourceTree = "<group>"; };
+		A50DE7B42A0E934600143B5F /* DigitalTwinsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalTwinsService.swift; sourceTree = "<group>"; };
+		A50DE7BC2A13C76D00143B5F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A50DE7C02A13C9B800143B5F /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		A50DE7C62A13DA1700143B5F /* AnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A50DE7932A0E76AD00143B5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50DE7AD2A0E86E100143B5F /* GRPC in Frameworks */,
+				A50DE7AB2A0E86E100143B5F /* CGRPCZlib in Frameworks */,
+				A50DE7AF2A0E86E100143B5F /* protoc-gen-grpc-swift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50DE78D2A0E76AD00143B5F = {
+			isa = PBXGroup;
+			children = (
+				A50DE7982A0E76AD00143B5F /* EnergyDemo */,
+				A50DE7972A0E76AD00143B5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A50DE7972A0E76AD00143B5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A50DE7962A0E76AD00143B5F /* EnergyDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50DE7982A0E76AD00143B5F /* EnergyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A50DE7B12A0E92D000143B5F /* digital-twin.grpc.swift */,
+				A50DE7B02A0E92D000143B5F /* digital-twin.pb.swift */,
+				A50DE7992A0E76AD00143B5F /* AppDelegate.swift */,
+				A50DE79B2A0E76AD00143B5F /* ContentView.swift */,
+				A50DE7C62A13DA1700143B5F /* AnimationManager.swift */,
+				A50DE7BC2A13C76D00143B5F /* Coordinator.swift */,
+				A50DE7B42A0E934600143B5F /* DigitalTwinsService.swift */,
+				A50DE79D2A0E76AD00143B5F /* Experience.rcproject */,
+				A50DE7C02A13C9B800143B5F /* robot.usdz */,
+				A50DE79F2A0E76AF00143B5F /* Assets.xcassets */,
+				A50DE7A12A0E76AF00143B5F /* Preview Content */,
+			);
+			path = EnergyDemo;
+			sourceTree = "<group>";
+		};
+		A50DE7A12A0E76AF00143B5F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A50DE7A22A0E76AF00143B5F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50DE7952A0E76AD00143B5F /* EnergyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50DE7A62A0E76AF00143B5F /* Build configuration list for PBXNativeTarget "EnergyDemo" */;
+			buildPhases = (
+				A50DE7922A0E76AD00143B5F /* Sources */,
+				A50DE7932A0E76AD00143B5F /* Frameworks */,
+				A50DE7942A0E76AD00143B5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnergyDemo;
+			packageProductDependencies = (
+				A50DE7AA2A0E86E100143B5F /* CGRPCZlib */,
+				A50DE7AC2A0E86E100143B5F /* GRPC */,
+				A50DE7AE2A0E86E100143B5F /* protoc-gen-grpc-swift */,
+			);
+			productName = EnergyDemo;
+			productReference = A50DE7962A0E76AD00143B5F /* EnergyDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50DE78E2A0E76AD00143B5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A50DE7952A0E76AD00143B5F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = A50DE7912A0E76AD00143B5F /* Build configuration list for PBXProject "EnergyDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50DE78D2A0E76AD00143B5F;
+			packageReferences = (
+				A50DE7A92A0E86E100143B5F /* XCRemoteSwiftPackageReference "grpc-swift" */,
+			);
+			productRefGroup = A50DE7972A0E76AD00143B5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50DE7952A0E76AD00143B5F /* EnergyDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A50DE7942A0E76AD00143B5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50DE7A32A0E76AF00143B5F /* Preview Assets.xcassets in Resources */,
+				A50DE7C12A13C9B800143B5F /* robot.usdz in Resources */,
+				A50DE7A02A0E76AF00143B5F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A50DE7922A0E76AD00143B5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50DE7B52A0E934600143B5F /* DigitalTwinsService.swift in Sources */,
+				A50DE79C2A0E76AD00143B5F /* ContentView.swift in Sources */,
+				A50DE7B22A0E92D000143B5F /* digital-twin.pb.swift in Sources */,
+				A50DE79A2A0E76AD00143B5F /* AppDelegate.swift in Sources */,
+				A50DE7C72A13DA1700143B5F /* AnimationManager.swift in Sources */,
+				A50DE79E2A0E76AD00143B5F /* Experience.rcproject in Sources */,
+				A50DE7B32A0E92D000143B5F /* digital-twin.grpc.swift in Sources */,
+				A50DE7BD2A13C76D00143B5F /* Coordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A50DE7A42A0E76AF00143B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A50DE7A52A0E76AF00143B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A50DE7A72A0E76AF00143B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EnergyDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 8DJEA9TZMY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lunatech.demo.energy.EnergyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A50DE7A82A0E76AF00143B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EnergyDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 8DJEA9TZMY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lunatech.demo.energy.EnergyDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A50DE7912A0E76AD00143B5F /* Build configuration list for PBXProject "EnergyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50DE7A42A0E76AF00143B5F /* Debug */,
+				A50DE7A52A0E76AF00143B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A50DE7A62A0E76AF00143B5F /* Build configuration list for PBXNativeTarget "EnergyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50DE7A72A0E76AF00143B5F /* Debug */,
+				A50DE7A82A0E76AF00143B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A50DE7A92A0E86E100143B5F /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A50DE7AA2A0E86E100143B5F /* CGRPCZlib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50DE7A92A0E86E100143B5F /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = CGRPCZlib;
+		};
+		A50DE7AC2A0E86E100143B5F /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50DE7A92A0E86E100143B5F /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+		A50DE7AE2A0E86E100143B5F /* protoc-gen-grpc-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50DE7A92A0E86E100143B5F /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = "protoc-gen-grpc-swift";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A50DE78E2A0E76AD00143B5F /* Project object */;
+}

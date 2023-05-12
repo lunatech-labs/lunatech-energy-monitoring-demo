@@ -1,0 +1,20 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "robot1.arreferenceimage"
+    },
+    {
+      "filename" : "robot2.arreferenceimage"
+    },
+    {
+      "filename" : "robot3.arreferenceimage"
+    },
+    {
+      "filename" : "robot4.arreferenceimage"
+    }
+  ]
+}

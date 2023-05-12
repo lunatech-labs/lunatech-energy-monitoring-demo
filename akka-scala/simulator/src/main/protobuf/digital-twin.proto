@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.lunatech.energy.demo";
+option java_outer_classname = "DigitalTwinProto";
+
+message Empty {}
+
+message CreateMachineRequest {
+  string machine_id = 1;
+  string machine_name = 2;
+}
+
+message ChangeMachineStatusRequest {
+  string machine_id = 1;
+  string new_status = 2;
+}
+
+service DigitalTwinService {
+  rpc CreateMachine(CreateMachineRequest) returns (Empty) {}
+  rpc ChangeMachineStatus(ChangeMachineStatusRequest) returns (Empty) {}
+}

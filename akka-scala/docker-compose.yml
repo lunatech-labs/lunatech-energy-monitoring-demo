@@ -1,0 +1,75 @@
+version: "3.8"
+services:
+  postgres:
+    build:
+      context: .
+      target: transient-db
+    environment:
+      POSTGRES_USER: digital_twins
+      POSTGRES_DB: digital_twins
+      POSTGRES_PASSWORD: v4U4GUjLXqmWV
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgres_test/data
+
+  flyway:
+    build:
+      context: .
+      target: migrate-db
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_HOSTNAME: postgres
+      POSTGRES_USERNAME: digital_twins
+      POSTGRES_DB: digital_twins
+      POSTGRES_PASSWORD: v4U4GUjLXqmWV
+    command: migrate
+    volumes:
+      - ./tools/sql:/flyway/sql
+
+  influxdb:
+    container_name: influxdb
+    image: influxdb:2.6.1-alpine
+    volumes:
+      - influxdb-lib:/var/lib/influxdb2
+    env_file:
+      # BE SURE TO CHANGE THIS LINE BEFORE GOING TO PRODUCTION
+      - ./influx2.env
+    ports:
+      - 8086:8086
+    privileged: true
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana-oss:9.4.9
+    volumes:
+      # Note: The 'ro' option specifies that the volume is mounted in read-only mode.
+      # However, certain files such as grafana.ini may require write access. Be mindful of security implications when removing ':ro'.
+      # Docs : https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3
+      - ./grafana/etc:/etc/grafana:ro
+      - grafana-lib:/var/lib/grafana
+      - grafana-log:/var/log/grafana
+    links:
+      - influxdb:influxdb
+    env_file:
+      # BE SURE TO CHANGE THIS LINE BEFORE GOING TO PRODUCTION
+      - ./grafana.env
+    ports:
+      - 3000:3000
+    depends_on:
+      - influxdb
+    privileged: true
+
+volumes:
+  db:
+    external: false
+
+  influxdb-lib:
+    external: false
+
+  grafana-lib:
+    external: false
+
+  grafana-log:
+    external: false
