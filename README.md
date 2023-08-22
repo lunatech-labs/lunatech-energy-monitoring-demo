@@ -13,3 +13,7 @@ This README doesn't cover everything that's needed to get the demo up and runnin
 - Using Protobufs in Swift
 
 Then contact trevor [spirally squirrel symbol] lunatech.co.uk for more info
+
+## Preview of the thing running
+
+[<img src="[https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg](https://github.com/lunatech-labs/lunatech-energy-monitoring-demo/assets/30719883/4001d59b-6ff6-415e-a7cd-9989e3b7a580)https://github.com/lunatech-labs/lunatech-energy-monitoring-demo/assets/30719883/4001d59b-6ff6-415e-a7cd-9989e3b7a580" width="50%">]([https://www.youtube.com/watch?v=Hc79sDi3f0U](https://www.youtube.com/watch?v=aZhuhr1evYg)https://www.youtube.com/watch?v=aZhuhr1evYg "Here's a video of the thing in operation")
